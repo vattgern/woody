@@ -12,9 +12,15 @@
         <script src="{{ asset('js/uikit.min.js') }}"></script>
         <script src="{{ asset('js/uikit-icons.min.js') }}"></script>
         @vite('resources/css/app.css')
+        <style>
+            body{
+                width: 100%;
+                height: 100vh;
+            }
+        </style>
     </head>
     <body id="app">
-        
+
         @vite('resources/js/app.js')
     </body>
 </html>
