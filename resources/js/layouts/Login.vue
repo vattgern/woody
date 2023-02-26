@@ -1,7 +1,7 @@
 <template>
-    <section class="uk-flex uk-flex-center uk-flex-column uk-flex-middle w-100 h-100">
+    <section class="uk-flex uk-flex-center uk-flex-column uk-flex-middle w-100 h-100 login">
         <figure>
-            <img :src="'./img/logo.png'" alt="">
+            <img :src="'./img/Logo.svg'" alt="logo">
         </figure>
         <form class="uk-flex uk-flex-column uk-flex-center uk-flex-middle">
             <div class="uk-margin uk-flex uk-flex-column">
@@ -66,5 +66,16 @@ export default {
     }
     .w-75{
         width: 75%;
+    }
+    .login {
+        grid-column: 1/3;
+        grid-row: 1/3;
+    }
+    figure {
+        width: 15%;
+        height: 40%;
+        display: flex;
+        justify-content: center;
+        background-color: #FDCB03;
     }
 </style>
