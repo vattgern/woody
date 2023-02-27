@@ -22,11 +22,11 @@ export default {
 <style scoped>
 .grid {
     width: 100vw;
-    height: 90vh;
+    height: 99.5vh;
     display: grid;
     grid-template-columns: 2fr 10fr;
     grid-template-rows: 15% 85%;
-    column-gap: 10vw;
-    row-gap: 10vh;
+    column-gap: 5vw;
+    row-gap: 5vh;
 }
 </style>
