@@ -1,0 +1,15 @@
+/*
+*  STYLE_BODY
+*/
+body {
+    overflow: hidden;
+    font-family: Nunito, sans-serif;
+    letter-spacing: 0.045em;
+}
+
+/*
+*  STYLE_P
+*/
+p {
+    margin: 0;
+}
