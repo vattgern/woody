@@ -1,7 +1,7 @@
 <template>
     <div class="grid">
-        <!--  sideNav  -->
-        <side-nav v-if="this.$route.fullPath !== '/login' &&
+        <!--  sideBar  -->
+        <side-bar v-if="this.$route.fullPath !== '/login' &&
                         this.$route.fullPath !== '/'"/>
         <!--  navLine  -->
         <nav-line v-if="this.$route.fullPath !== '/login' &&
@@ -12,10 +12,10 @@
 </template>
 
 <script>
-import SideNav from "./components/sideNav.vue";
+import SideBar from "./components/SideBar.vue";
 import NavLine from "./components/navLine.vue";
 export default {
-    components: {NavLine, SideNav}
+    components: {NavLine, SideBar}
 }
 </script>
 
@@ -25,8 +25,8 @@ export default {
     height: 99.5vh;
     display: grid;
     grid-template-columns: 2fr 10fr;
-    grid-template-rows: 15% 85%;
+    grid-template-rows: 7.5% 92.5%;
     column-gap: 5vw;
-    row-gap: 5vh;
+    row-gap: 2.5vh;
 }
 </style>

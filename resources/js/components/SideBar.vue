@@ -8,6 +8,9 @@
             <router-link to="/snippets">Сниппеты</router-link>
         </li>
         <li>
+            <router-link to="/users/create">Создание пользователя</router-link>
+        </li>
+        <li>
             <router-link to="/users">Пользователи</router-link>
         </li>
         <li>

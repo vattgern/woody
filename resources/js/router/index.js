@@ -6,6 +6,7 @@ import Trash from "../layouts/Trash.vue";
 import Snippets from "../layouts/Snippets.vue";
 import Settings from "../layouts/Settings.vue";
 import Users from "../layouts/Users.vue";
+import UserCreate from "../layouts/UserCreate.vue";
 
 export default createRouter({
     history: createWebHistory(),
@@ -45,6 +46,11 @@ export default createRouter({
             path: '/users',
             name: 'Пользователи',
             component: Users,
+        },
+        {
+            path: '/users/create',
+            name: 'Пользователи / Создание Пользователя',
+            component: UserCreate,
         },
     ]
 })
