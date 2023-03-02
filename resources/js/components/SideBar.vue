@@ -8,13 +8,25 @@
             <router-link to="/snippets">Сниппеты</router-link>
         </li>
         <li>
+            <router-link to="/snippets/deleted">Удаленные сниппеты</router-link>
+        </li>
+        <li>
             <router-link to="/users/create">Создание пользователя</router-link>
+        </li>
+        <li>
+            <router-link to="/users/edit">Редактирование пользователя</router-link>
         </li>
         <li>
             <router-link to="/users">Пользователи</router-link>
         </li>
         <li>
             <router-link to="/admins">Администраторы</router-link>
+        </li>
+        <li>
+            <router-link to="/admins/create">Создание Администратора</router-link>
+        </li>
+        <li>
+            <router-link to="/admins/edit">Редактирование Администратора</router-link>
         </li>
     </ul>
 
