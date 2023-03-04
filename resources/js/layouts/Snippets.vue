@@ -66,7 +66,7 @@
 .snippets {
     grid-column: 2/3;
     grid-row: 2/3;
-    /*padding: 30px 0 0 30px;*/
+    padding: 30px 0 0 30px;
 }
 .snippets-header{
     width: 87.5%;
