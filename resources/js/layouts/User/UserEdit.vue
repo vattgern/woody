@@ -20,27 +20,18 @@
                             </div>
                         </div>
                     </div>
-                    <div class="uk-width-1-2 uk-flex uk-flex-column uk-flex-around" >
+                    <div class="uk-width-1-2 uk-flex uk-flex-column uk-flex-around">
                         <div class="uk-inline">
                             <span class="uk-form-icon" uk-icon="icon: user"></span>
-                            <input type="text"
-                                   class="uk-input"
-                                   v-model="surname"
-                                   placeholder="Фамилия">
+                            <input type="text" class="uk-input" v-model="surname" placeholder="Фамилия">
                         </div>
                         <div class="uk-inline">
                             <span class="uk-form-icon" uk-icon="icon: user"></span>
-                            <input type="text"
-                                   class="uk-input"
-                                   v-model="name"
-                                   placeholder="Имя">
+                            <input type="text" class="uk-input" v-model="name" placeholder="Имя">
                         </div>
                         <div class="uk-inline">
                             <span class="uk-form-icon" uk-icon="icon: mail"></span>
-                            <input type="email"
-                                   class="uk-input"
-                                   v-model="email"
-                                   placeholder="Почта">
+                            <input type="email" class="uk-input" v-model="email" placeholder="Почта">
                         </div>
                     </div>
                 </div>
@@ -48,25 +39,18 @@
                 <div class="uk-flex uk-flex-row uk-flex-between">
                     <div class="uk-inline">
                         <span class="uk-form-icon" uk-icon="icon: eye"></span>
-                        <input class="uk-input"
-                               type="password"
-                               placeholder="Пароль"
-                               v-model="password"
-                               aria-label="Clickable icon">
+                        <input class="uk-input" type="password" placeholder="Пароль" v-model="password"
+                            aria-label="Clickable icon">
                     </div>
                     <div class="uk-inline">
                         <span class="uk-form-icon" uk-icon="icon: eye"></span>
-                        <input class="uk-input"
-                               type="password"
-                               placeholder="Повторить пароль"
-                               v-model="confirmPassword"
-                               aria-label="Clickable icon">
+                        <input class="uk-input" type="password" placeholder="Повторить пароль" v-model="confirmPassword"
+                            aria-label="Clickable icon">
                     </div>
                 </div>
                 <hr>
-                <button class="uk-width-1-4 uk-button uk-button-primary"
-                        @click.prevent="createUser"
-                        type="button">Сохранить</button>
+                <button class="uk-width-1-4 uk-button uk-button-primary" @click.prevent="createUser"
+                    type="button">Сохранить</button>
             </div>
         </div>
         <div class="uk-width-1-2 uk-flex uk-flex-center uk-flex-middle">
@@ -74,25 +58,32 @@
                 <div class="uk-text-center">
                     <h3>Правила заполнения формы</h3>
                 </div>
-                <div class="uk-flex uk-flex-row uk-flex-middle uk-background-muted uk-padding-small">
-                    <span :class=" validation.isNotEqualPass ? 'dot dot-success' : 'dot dot-warning'"></span>
-                    <p :class=" validation.isNotEqualPass ? 'uk-text-success rule-success' : 'uk-text-warning'">Пароли должны совпадать</p>
-                </div>
-                <div class="uk-flex uk-flex-row uk-flex-middle uk-background-muted uk-padding-small">
-                    <span :class=" validation.isNotCorrectPass ? 'dot dot-success' : 'dot dot-warning'"></span>
-                    <p :class=" validation.isNotCorrectPass ? 'uk-text-success rule-success' : 'uk-text-warning'">Кол-во символов должно быть больше 8</p>
-                </div>
-                <div class="uk-flex uk-flex-row uk-flex-middle uk-background-muted uk-padding-small">
-                    <span :class=" validation.isNotEmailCorrect ? 'dot dot-success' : 'dot dot-warning'"></span>
-                    <p :class=" validation.isNotEmailCorrect ? 'uk-text-success rule-success' : 'uk-text-warning'">Почта должена содержать домен</p>
-                </div>
-                <div class="uk-flex uk-flex-row uk-flex-middle uk-background-muted uk-padding-small">
-                    <span :class=" validation.isFillName ? 'dot dot-success' : 'dot dot-warning'"></span>
-                    <p :class=" validation.isFillName ? 'uk-text-success rule-success' : 'uk-text-warning'">Имя должно быть заполнено</p>
-                </div>
-                <div class="uk-flex uk-flex-row uk-flex-middle uk-background-muted uk-padding-small">
-                    <span :class=" validation.isFillSurName ? 'dot dot-success' : 'dot dot-warning'"></span>
-                    <p :class=" validation.isFillSurName ? 'uk-text-success rule-success' : 'uk-text-warning'">Фамилия должна быть заполнена</p>
+                <div class="rules">
+                    <div class="uk-flex uk-flex-row uk-flex-middle uk-background-muted uk-padding-small">
+                        <span :class="validation.isNotEqualPass ? 'dot dot-success' : 'dot dot-warning'"></span>
+                        <p :class="validation.isNotEqualPass ? 'uk-text-success rule-success' : 'uk-text-warning'">Пароли
+                            должны совпадать</p>
+                    </div>
+                    <div class="uk-flex uk-flex-row uk-flex-middle uk-background-muted uk-padding-small">
+                        <span :class="validation.isNotCorrectPass ? 'dot dot-success' : 'dot dot-warning'"></span>
+                        <p :class="validation.isNotCorrectPass ? 'uk-text-success rule-success' : 'uk-text-warning'">Кол-во
+                            символов должно быть больше 8</p>
+                    </div>
+                    <div class="uk-flex uk-flex-row uk-flex-middle uk-background-muted uk-padding-small">
+                        <span :class="validation.isNotEmailCorrect ? 'dot dot-success' : 'dot dot-warning'"></span>
+                        <p :class="validation.isNotEmailCorrect ? 'uk-text-success rule-success' : 'uk-text-warning'">Почта
+                            должена содержать домен</p>
+                    </div>
+                    <div class="uk-flex uk-flex-row uk-flex-middle uk-background-muted uk-padding-small">
+                        <span :class="validation.isFillName ? 'dot dot-success' : 'dot dot-warning'"></span>
+                        <p :class="validation.isFillName ? 'uk-text-success rule-success' : 'uk-text-warning'">Имя должно
+                            быть заполнено</p>
+                    </div>
+                    <div class="uk-flex uk-flex-row uk-flex-middle uk-background-muted uk-padding-small">
+                        <span :class="validation.isFillSurName ? 'dot dot-success' : 'dot dot-warning'"></span>
+                        <p :class="validation.isFillSurName ? 'uk-text-success rule-success' : 'uk-text-warning'">Фамилия
+                            должна быть заполнена</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -102,7 +93,7 @@
 <script>
 export default {
     name: "UserEdit",
-    data(){
+    data() {
         return {
             file: null,
             path: null,
@@ -124,20 +115,20 @@ export default {
         }
     },
     methods: {
-        handleFile(){
+        handleFile() {
             this.file = this.$refs.avatar.files[0];
             this.path = URL.createObjectURL(this.file);
             this.isChoose = true;
         },
-        resetFile(){
+        resetFile() {
             this.isChoose = false;
             this.file = null;
             this.path = null;
         },
-        createUser(){
-            if(this.validation.isFillName && this.validation.isFillSurName
+        createUser() {
+            if (this.validation.isFillName && this.validation.isFillSurName
                 && this.validation.isNotEqualPass && this.validation.isNotCorrectPass
-                && this.validation.isNotEmailCorrect){
+                && this.validation.isNotEmailCorrect) {
 
                 let formData = this.setFormData();
                 this.resetAllData();
@@ -145,7 +136,7 @@ export default {
                 console.log('неудача');
             }
         },
-        setFormData(){
+        setFormData() {
             let fd = new FormData();
 
             fd.set('name', this.name);
@@ -156,7 +147,7 @@ export default {
 
             return fd;
         },
-        resetAllData(){
+        resetAllData() {
             this.name = '';
             this.surname = '';
             this.email = '';
@@ -167,22 +158,22 @@ export default {
         }
     },
     watch: {
-        password(value){
+        password(value) {
             this.validation.isNotEqualPass = this.password === this.confirmPassword;
             this.validation.isNotCorrectPass = this.password.length >= 8;
         },
-        confirmPassword(value){
+        confirmPassword(value) {
             this.validation.isNotEqualPass = this.password === this.confirmPassword;
             this.validation.isNotCorrectPass = this.confirmPassword.length >= 8;
         },
-        email(value){
+        email(value) {
             let a = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             this.validation.isNotEmailCorrect = value.match(a) !== null;
         },
-        name(){
+        name() {
             this.validation.isFillName = this.name != '';
         },
-        surname(){
+        surname() {
             this.validation.isFillSurName = this.surname != '';
         }
     }
@@ -190,12 +181,13 @@ export default {
 </script>
 
 <style scoped>
-.avatar-area{
+.avatar-area {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.avatar-area > div{
+
+.avatar-area>div {
     width: 225px;
     height: 225px;
     border-radius: 250px;
@@ -209,21 +201,25 @@ export default {
     align-items: center;
     flex-direction: column;
 }
-.file-upload{
+
+.file-upload {
     outline: none;
     border: none;
     background: transparent;
 }
-.file-upload > span{
+
+.file-upload>span {
     cursor: pointer;
 }
-.file-preview{
+
+.file-preview {
     width: 100%;
     height: 100%;
     position: relative;
     overflow: hidden;
 }
-.file-preview > img{
+
+.file-preview>img {
     position: absolute;
     top: 0;
     left: 0;
@@ -233,7 +229,8 @@ export default {
     object-fit: cover;
     border-radius: 250px;
 }
-.file-preview > div{
+
+.file-preview>div {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -250,22 +247,33 @@ export default {
 
     color: white;
 }
-.w-75{
+
+.w-75 {
     width: 75%;
 }
-.dot-warning{
+
+.dot-warning {
     background: #ec2147;
 }
-.dot-success{
+
+.dot-success {
     background: #32d296;
 }
-.dot{
+
+.dot {
     width: 10px;
     height: 10px;
     border-radius: 100px;
     margin: 0 10px;
 }
-.rule-success{
+
+.rule-success {
     text-decoration: line-through;
+}
+
+.rules {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
 }
 </style>

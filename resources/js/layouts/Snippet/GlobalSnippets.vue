@@ -1,6 +1,6 @@
 <template>
-    <div class="users">
-        <div class="users-header uk-flex uk-flex-middle uk-flex-row uk-flex-between">
+    <div class="snippets">
+        <div class="snippets-header uk-flex uk-flex-middle uk-flex-row uk-flex-between">
             <div class="uk-flex uk-flex-column uk-flex-middle">
                 <p>Сортируем по:</p>
                 <ul class="uk-subnav uk-subnav-pill" uk-margin>
@@ -10,13 +10,14 @@
                 </ul>
             </div>
             <h2 class="uk-article-title uk-flex uk-text-center">
-                Пользователи
+                Глобальные<br>
+                сниппеты
             </h2>
             <div>
-                <router-link class="add uk-button uk-button-primary uk-flex" to="/users/create">Добавить</router-link>
+                <router-link class="uk-button uk-button-primary uk-flex" to="/snippets/create">Добавить</router-link>
             </div>
         </div>
-        <div class="users-body uk-overflow-auto">
+        <div class="snippets-body uk-overflow-auto">
             <table class="uk-table uk-table-hover uk-table-divider">
                 <thead>
                     <tr>
@@ -27,7 +28,7 @@
                         <th>SOME</th>
                         <th>SOME</th>
                         <th>SOME</th>
-                        <th>SOME</th>
+                        <th>Статус</th>
                         <th><span uk-icon="pencil"></span></th>
                         <th><span uk-icon="trash"></span></th>
                     </tr>
@@ -41,14 +42,15 @@
                         <td>Table Data</td>
                         <td>Table Data</td>
                         <td>Table Data</td>
-                        <td>Table Data</td>
-                        <td><router-link to="/users/edit"><span uk-icon="pencil"></span></router-link></td>
+                        <td id="area-btn" class="uk-flex">
+                            <input type="checkbox" class="status-btn" id="status">
+                        </td>
+                        <td><router-link to="/snippets/edit"><span uk-icon="pencil"></span></router-link></td>
                         <td><router-link to=""><span uk-icon="trash"></span></router-link></td>
                     </tr>
                 </tbody>
             </table>
         </div>
-
         <div class="pagination uk-flex-left uk-flex-middle uk-flex">
             <ul class="uk-pagination" uk-margin>
                 <li>
@@ -69,22 +71,24 @@
 </template>
 
 <script>
-export default {};
+export default {
+
+}
 </script>
 
 <style scoped>
-.users {
+.snippets {
     grid-column: 2/3;
     grid-row: 2/3;
     padding: 30px 0 0 30px;
 }
 
-.users-header {
+.snippets-header {
     width: 88%;
     height: 20%;
 }
 
-.users-body {
+.snippets-body {
     width: 90%;
     height: 60%;
     padding-right: 30px;
@@ -124,8 +128,42 @@ th {
     text-align: center;
 }
 
-.add {
-    color: white;
-    text-decoration: none;
+#area-btn {
+    position: relative;
 }
-</style>
+
+.status-btn {
+    width: 38px;
+    appearance: none;
+    cursor: pointer;
+}
+
+.status-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 25px;
+    border-radius: 16px;
+    background: #0e6dcd;
+
+    transform: translate(50%, 50%);
+}
+
+.status-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 47.5%;
+    height: 19px;
+    width: 19px;
+    border-radius: 100px;
+    background: white;
+    transform: translate(-60%, -10%);
+    transition: all 0.4s ease;
+}
+
+.status-btn:checked::after {
+    left: 75%;
+}</style>
