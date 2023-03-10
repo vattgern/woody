@@ -276,4 +276,5 @@ export default {
     flex-direction: column;
     row-gap: 10px;
 }
+
 </style>

@@ -2,10 +2,10 @@
     <div class="grid">
         <!--  sideBar  -->
         <side-bar v-if="this.$route.fullPath !== '/login' &&
-                        this.$route.fullPath !== '/'"/>
+            this.$route.fullPath !== '/'" />
         <!--  navLine  -->
         <nav-line v-if="this.$route.fullPath !== '/login' &&
-                        this.$route.fullPath !== '/'"/>
+            this.$route.fullPath !== '/'" />
         <!--  Main-content  -->
         <router-view />
     </div>
@@ -15,7 +15,7 @@
 import SideBar from "./components/SideBar.vue";
 import NavLine from "./components/navLine.vue";
 export default {
-    components: {NavLine, SideBar}
+    components: { NavLine, SideBar }
 }
 </script>
 

@@ -129,7 +129,6 @@ export default {
             if (this.validation.isFillName && this.validation.isFillSurName
                 && this.validation.isNotEqualPass && this.validation.isNotCorrectPass
                 && this.validation.isNotEmailCorrect) {
-
                 let formData = this.setFormData();
                 this.resetAllData();
             } else {
@@ -146,11 +145,11 @@ export default {
             return fd;
         },
         resetAllData() {
-            this.name = '';
-            this.surname = '';
-            this.email = '';
-            this.password = '';
-            this.confirmPassword = '';
+            this.name = ''
+            this.surname = ''
+            this.email = ''
+            this.password = ''
+            this.confirmPassword = ''
             this.resetFile();
         }
     },

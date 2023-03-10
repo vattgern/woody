@@ -42,8 +42,8 @@
                         <td>Table Data</td>
                         <td>Table Data</td>
                         <td>Table Data</td>
-                        <td id="area-btn" class="uk-flex">
-                            <input type="checkbox" class="status-btn" id="status">
+                        <td>
+                            <input type="checkbox">
                         </td>
                         <td><router-link to="/snippets/edit"><span uk-icon="pencil"></span></router-link></td>
                         <td><router-link to=""><span uk-icon="trash"></span></router-link></td>
@@ -124,46 +124,8 @@ table {
     background-color: white;
 }
 
-th {
+th,
+td {
     text-align: center;
 }
-
-#area-btn {
-    position: relative;
-}
-
-.status-btn {
-    width: 38px;
-    appearance: none;
-    cursor: pointer;
-}
-
-.status-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50px;
-    height: 25px;
-    border-radius: 16px;
-    background: #0e6dcd;
-
-    transform: translate(50%, 50%);
-}
-
-.status-btn::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 47.5%;
-    height: 19px;
-    width: 19px;
-    border-radius: 100px;
-    background: white;
-    transform: translate(-60%, -10%);
-    transition: all 0.4s ease;
-}
-
-.status-btn:checked::after {
-    left: 75%;
-}</style>
+</style>
