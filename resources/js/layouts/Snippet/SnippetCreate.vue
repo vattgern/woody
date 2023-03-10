@@ -2,19 +2,19 @@
     <form class="uk-margin">
         <div>
             <h2 class="uk-text-bold uk-margin-left uk-flex">Создание <div>
-        <div uk-form-custom="target: > * > p:last-child">
-            <select aria-label="Custom controls">
-                <option value="1">[Тип]</option>
-                <option value="2">Тип 01</option>
-                <option value="2">Тип 02</option>
-                <option value="3">Тип 03</option>
-                <option value="4">Тип 04</option>
-            </select>
-            <span class="uk-link">
-                <p class="uk-margin-small-left uk-margin-small-right uk-margin-small-bottom">[Тип]</p>
-            </span>
-        </div>
-    </div> сниппета
+                    <div uk-form-custom="target: > * > p:last-child">
+                        <select aria-label="Custom controls">
+                            <option value="1">[Тип]</option>
+                            <option value="2">Тип 01</option>
+                            <option value="2">Тип 02</option>
+                            <option value="3">Тип 03</option>
+                            <option value="4">Тип 04</option>
+                        </select>
+                        <span class="uk-link">
+                            <p class="uk-margin-small-left uk-margin-small-right uk-margin-small-bottom">[Тип]</p>
+                        </span>
+                    </div>
+                </div> сниппета
             </h2>
         </div>
         <div class="uk-flex">

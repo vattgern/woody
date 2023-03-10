@@ -10,7 +10,10 @@
                         <h3>Snippet Title</h3>
                     </div>
                     <div class="uk-card-body uk-text-center">
-                        <p>Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consecteturLorem ipsum dolor
+                            sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat.</p>
                     </div>
                     <div class="uk-card-footer uk-flex uk-flex-between">
                         <a href="#" class="uk-button uk-button-text uk-text-primary uk-text-small">Восстановить</a>
@@ -39,6 +42,7 @@ export default {
 .snippets-header {
     height: 15%;
 }
+
 .snippets-body {
     height: 80%;
     width: 95%;
@@ -61,5 +65,4 @@ p {
     line-height: 97.4%;
     letter-spacing: 0.045em;
     height: 20%;
-}
-</style>
+}</style>

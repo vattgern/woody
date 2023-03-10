@@ -30,7 +30,7 @@ import axios from "axios";
 
 export default {
     name: "Login",
-    data(){
+    data() {
         return {
             email: '',
             password: '',
@@ -41,16 +41,16 @@ export default {
         }
     },
     watch: {
-        email: function(value){
+        email: function (value) {
             let a = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             this.validation.isEmail = value.match(a) === null;
         },
-        password: function(value){
+        password: function (value) {
             this.validation.isPassword = value.length < 8;
         }
     },
     methods: {
-        login(){
+        login() {
             // axios запрос
         }
     }
@@ -58,24 +58,27 @@ export default {
 </script>
 
 <style scoped>
-    .w-100{
-        width: 100%;
-    }
-    .h-100{
-        height: 100%;
-    }
-    .w-75{
-        width: 75%;
-    }
-    .login {
-        grid-column: 1/3;
-        grid-row: 1/3;
-    }
-    figure {
-        width: 15%;
-        height: 40%;
-        display: flex;
-        justify-content: center;
-        background-color: #FDCB03;
-    }
-</style>
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.login {
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+
+figure {
+    width: 15%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    background-color: #FDCB03;
+}</style>

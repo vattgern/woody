@@ -1,10 +1,10 @@
 <template>
-
     <div uk-filter="target: .js-filter" class="settings">
         <div class="settings-header">
             <div>
                 <ul class="uk-subnav uk-subnav-pill">
-                    <li uk-filter-control=".setting_first" class="uk-active"><a class="uk-text-capitalize" href="#">Основные настройки</a></li>
+                    <li uk-filter-control=".setting_first" class="uk-active"><a class="uk-text-capitalize" href="#">Основные
+                            настройки</a></li>
                     <li uk-filter-control=".setting_second"><a class="uk-text-capitalize" href="#">Редактор кода</a></li>
                 </ul>
             </div>
@@ -36,7 +36,6 @@
             </li>
         </ul>
     </div>
-
 </template>
 
 <script>
@@ -55,6 +54,7 @@ export default {
 .settings-header {
     height: 15%;
 }
+
 .settings-body {
     height: 80%;
     width: 95%;
@@ -66,16 +66,16 @@ export default {
     color: black;
 }
 
-.uk-subnav > * > :first-child {
+.uk-subnav>*> :first-child {
     font-size: 1.5rem;
 }
 
-.uk-subnav > * > :hover {
+.uk-subnav>*> :hover {
     background: none;
 }
 
-th, td {
+th,
+td {
     text-align: center;
 }
-
 </style>

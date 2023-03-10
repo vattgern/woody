@@ -1,13 +1,13 @@
 <template>
-     <div class="dashboard">
-         <h1>DASHBOARD_LAYOUT</h1>
-     </div>
+    <div class="dashboard">
+        <h1>DASHBOARD_LAYOUT</h1>
+    </div>
 </template>
 
 <script>
-    export default {
+export default {
 
-    }
+}
 </script>
 
 <style scoped>

@@ -122,12 +122,13 @@ table {
     background-color: white;
 }
 
-th, td {
+th,
+td {
     text-align: center;
 }
+
 .add {
     color: white;
     text-decoration: none;
 }
-
 </style>

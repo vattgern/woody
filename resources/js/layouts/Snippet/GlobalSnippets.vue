@@ -124,7 +124,8 @@ table {
     background-color: white;
 }
 
-th, td {
+th,
+td {
     text-align: center;
 }
 </style>
