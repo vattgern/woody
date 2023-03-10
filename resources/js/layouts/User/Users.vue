@@ -120,7 +120,7 @@ table {
     background-color: white;
 }
 
-th {
+th, td {
     text-align: center;
 }
 

@@ -3,6 +3,8 @@
         <ul class="uk-breadcrumb">
             <li v-if="
             this.$route.path==='/snippets/user' ||
+            this.$route.path==='/snippets/create' ||
+            this.$route.path==='/snippets/edit' ||
             this.$route.path === '/snippets'"><router-link to="/snippets">Сниппеты</router-link></li>
             <li><span>{{  this.$route.name  }}</span></li>
         </ul>

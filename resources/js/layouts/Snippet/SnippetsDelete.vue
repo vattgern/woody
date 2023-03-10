@@ -41,6 +41,7 @@ export default {
 }
 .snippets-body {
     height: 80%;
+    width: 95%;
 }
 
 h2 {

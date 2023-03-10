@@ -1,17 +1,19 @@
 <template>
     <div class="sideNav uk-flex uk-flex-column uk-flex-middle">
+        
         <div class="w-75 uk-flex uk-flex-row uk-flex-middle">
             <img :src="'/img/Logo.svg'" class="uk-width-1-2">
             <h2 class="uk-padding-small">Админ Панель</h2>
         </div>
+
         <div class="uk-margin w-80">
             <form class="uk-search uk-search-default">
                 <span class="uk-search-icon-flip" uk-search-icon></span>
                 <input class="uk-search-input" type="search" placeholder="Что-то ищем..." aria-label="Search">
             </form>
         </div>
-        <ul class="uk-list list">
 
+        <ul class="uk-list list">
             <router-link to="/dashboard" class="uk-flex uk-flex-row uk-text-secondary">
                 <span uk-icon="home" class="mr"></span>
                 <p>Главная</p>
@@ -24,7 +26,7 @@
 
             <router-link to="" class="uk-flex uk-flex-row uk-text-secondary">
                 <span uk-icon="code" class="mr"></span>
-                <p>Сниппеты</p>
+                <p>Сниппеты <span uk-drop-parent-icon></span></p>
             </router-link>
             <div uk-dropdown="pos: right-top">
                 <ul class="uk-nav uk-dropdown-nav">
@@ -37,8 +39,8 @@
                 <span uk-icon="user" class="mr"></span>
                 <p>Администраторы</p>
             </router-link>
-
         </ul>
+
         <ul class="uk-list list">
             <router-link to="/settings" class="uk-flex uk-flex-row uk-flex-middle uk-text-secondary">
                 <span uk-icon="settings" class="mr"></span>
@@ -53,6 +55,7 @@
                 <p>Выйти</p>
             </router-link>
         </ul>
+
         <div class="uk-flex uk-flex-column uk-text-center uk-margin uk-flex-middle">
             <span class="image uk-border-circle"></span>
             <div class="uk-width-expand">
@@ -78,6 +81,10 @@ export default {
 
 .sideNav div:nth-child(1) {
     height: 15%;
+}
+
+.sideNav ul:nth-child(3) {
+    height: 25%;
 }
 
 .list {

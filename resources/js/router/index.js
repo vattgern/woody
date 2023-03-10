@@ -29,7 +29,7 @@ export default createRouter({
         },
         {
             path: "/settings",
-            name: "Настройки",
+            name: "Настройки плагина",
             component: Settings,
         },
         /*
